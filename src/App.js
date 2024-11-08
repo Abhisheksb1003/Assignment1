@@ -41,7 +41,7 @@ const App = () => {
   const [selectedSpeaker, setSelectedSpeaker] = useState(null);
 
   const handleSeeProgramClick = () => {
-    setSelectedSpeaker(speakers[0]); // Show the first speaker by default
+    setSelectedSpeaker(speakers[0]);
   };
 
   const handleCloseDetail = () => {
@@ -52,32 +52,32 @@ const App = () => {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',  // Centers content horizontally
-      justifyContent: 'center', // Centers content vertically
-      height: '100vh', // Makes the container take full height of the viewport
-      textAlign: 'center', // Centers text content inside the container
+      alignItems: 'center',  
+      justifyContent: 'center', 
+      height: '100vh', 
+      textAlign: 'center', 
       padding: '20px',
     }}>
       <h2>View our Featured Speakers for the Event</h2>
       <p>Speakers are core contributors and industry thought leaders working at companies that push for innovation.</p>
 
-      {/* Speaker Detail Section */}
+     
       {selectedSpeaker && <SpeakerDetail speaker={selectedSpeaker} onClose={handleCloseDetail} />}
 
-      {/* Speaker Slider */}
+     
       <div style={{
         display: 'flex',
         overflowX: 'auto',
         gap: '20px',
         padding: '20px 0',
-        justifyContent: 'center', // Centers the speaker cards horizontally
+        justifyContent: 'center', 
       }}>
         {speakers.map((speaker) => (
           <SpeakerCard key={speaker.id} speaker={speaker} onClick={() => setSelectedSpeaker(speaker)} />
         ))}
       </div>
 
-      {/* See Program Button */}
+      
       <button
         onClick={handleSeeProgramClick}
         style={{

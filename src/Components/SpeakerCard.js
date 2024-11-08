@@ -1,4 +1,4 @@
-// SpeakerCard.js
+
 import React from 'react';
 
 const SpeakerCard = ({ speaker, onClick }) => {
@@ -12,7 +12,7 @@ const SpeakerCard = ({ speaker, onClick }) => {
         cursor: 'pointer',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center', // Centers content horizontally
+        alignItems: 'center', 
       }}
       onClick={() => onClick(speaker)}
     >

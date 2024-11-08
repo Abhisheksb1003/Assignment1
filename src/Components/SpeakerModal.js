@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaTimes, FaCommentDots } from 'react-icons/fa'; // Importing the required icons from React Icons
+import { FaLinkedin, FaTimes, FaCommentDots } from 'react-icons/fa'; 
 
 const SpeakerDetailsModal = ({ speaker, onClose }) => {
   return (
@@ -27,7 +27,7 @@ const SpeakerDetailsModal = ({ speaker, onClose }) => {
           position: 'relative',
           textAlign: 'center',
         }}
-        onClick={(e) => e.stopPropagation()} // Prevent modal close on inner click
+        onClick={(e) => e.stopPropagation()} 
       >
         <button
           onClick={onClose}
@@ -53,7 +53,7 @@ const SpeakerDetailsModal = ({ speaker, onClose }) => {
         <p style={{ color: '#888' }}>{speaker.company}</p>
         <p style={{ fontSize: '14px', color: '#555' }}>{speaker.bio}</p>
 
-        {/* Add the icons (LinkedIn, Message bubble) */}
+        
         <div style={{ marginTop: '20px' }}>
           <a href={`https://www.linkedin.com/in/${speaker.name.replace(' ', '').toLowerCase()}`} target="_blank" rel="noopener noreferrer">
             <FaLinkedin style={{ marginRight: '10px', cursor: 'pointer', fontSize: '20px' }} />

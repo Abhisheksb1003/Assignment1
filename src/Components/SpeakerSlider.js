@@ -1,4 +1,4 @@
-// SpeakerSlider.js
+
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import SpeakerCard from './SpeakerCard';
@@ -21,9 +21,9 @@ const SpeakerSlider = ({ speakers }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Show 4 speaker cards in a row
+    slidesToShow: 4, 
     slidesToScroll: 0,
-    arrows: true, // Show navigation arrows
+    arrows: true, 
     responsive: [
       {
         breakpoint: 1024,
@@ -55,7 +55,7 @@ const SpeakerSlider = ({ speakers }) => {
       <div style={{ margin: '20px 0', width: '90%', marginLeft: 'auto', marginRight: 'auto' }}>
         <Slider {...sliderSettings}>
           {speakers.map((speaker) => (
-            <div key={speaker.id} style={{ padding: '0 10px' }}> {/* Wrapper div to manage padding */}
+            <div key={speaker.id} style={{ padding: '0 10px' }}>
               <SpeakerCard speaker={speaker} onClick={handleCardClick} />
             </div>
           ))}

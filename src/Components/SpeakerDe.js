@@ -1,4 +1,4 @@
-// SpeakerDetail.js
+
 import React from 'react';
 
 const SpeakerDetail = ({ speaker, onClose }) => {
